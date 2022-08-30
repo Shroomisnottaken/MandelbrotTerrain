@@ -15,16 +15,13 @@ float sdBox(vec3 p, vec3 b)
 }
 
 float mb(vec3 p) {
-
-    //p.xyz = p.xzy;
-    
 	vec3 z = p;
     vec2 ev = p.xy;
 	float power = 8.0;
     
-	float r = p.z;//length(z);
+	float r = p.z;;
     float theta = atan(z.x / z.y) * length(z);
-    float phi = sin(length(ev));//asin(z.z / length(z));
+    float phi = sin(length(ev));
     
     // p reset
     p = r * vec3(cos(theta)*cos(phi), sin(theta)*cos(phi), sin(phi));
